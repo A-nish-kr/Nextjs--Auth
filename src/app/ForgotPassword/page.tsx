@@ -12,13 +12,6 @@ export default function Forgotpassword(){
     })
     const [loading, setLoading] = useState(false);
 
-    // Define a type for the error
-    interface AxiosError extends Error {
-        response?: {
-            data: any;
-        };
-    }
-
     const ChangePassword = async () => {
         try {
             setLoading(true);
