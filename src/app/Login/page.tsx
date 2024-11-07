@@ -63,7 +63,7 @@ export default function LoginPage() {
             onChange={(e) => setUser({...user, password: e.target.value})}
             placeholder="password"
             />
-            <Link href={"/sendforgot"}>Forgot Password ? </Link>
+            <Link href={"/Sendforgot"}>Forgot Password ? </Link>
             <button
             onClick={onLogin}
             disabled = {buttonDisabled}
