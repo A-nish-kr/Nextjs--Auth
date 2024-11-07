@@ -25,8 +25,12 @@ export default function Forgotpassword(){
             const response = await axios.post("/api/users/forgotpassword", {token, ...user});
             console.log("password changed Successfully", response.data);
             router.push("/Login");
-        } catch (error: AxiosError) {
-            console.log("password change failed", error.message);
+        } catch (error: unknown) {
+            if (error instanceof Error) {
+                console.log("password change failed", error.message);
+            } else {
+                console.log("password change failed", error);
+            }
         } finally{
             setLoading(false);
         }
