@@ -10,7 +10,6 @@ export default function Forgotpassword(){
         oldPassword:"",
         newPassword: "",
     })
-    const [buttonDisabled, setButtonDisabled] = React.useState(false);
     const [loading, setLoading] = React.useState(false);
 
     const ChangePassword = async () => {
